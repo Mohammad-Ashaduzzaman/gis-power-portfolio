@@ -1,0 +1,12 @@
+/* =========================================================
+   P07 — Grid Asset Flood & River-Erosion Risk
+   Project-specific visual components only. Master P06 shell unchanged.
+   ========================================================= */
+.risk-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin:8px 0 10px}.risk-strip span{height:6px;border-radius:99px}.risk-low{background:#6bad7d}.risk-mod{background:#e1ad43}.risk-high{background:#e4773a}.risk-vhigh{background:#c8454b}.risk-critical{background:#7b2f4d}
+.p07-chart{margin:8px 0 13px}.p07-bar{margin-bottom:7px}.p07-bar header{display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;gap:8px}.p07-bar .track{height:6px;background:#edf1ef;border-radius:99px;overflow:hidden}.p07-bar .fill{height:100%;background:var(--gis);border-radius:99px}
+.p07-scenario{border:1px solid #d9e5e0;background:#f7faf8;border-radius:10px;padding:9px;margin-bottom:10px}.p07-scenario b{display:block;font-size:11px}.p07-scenario p{font-size:11px;color:#667085;margin:3px 0 0;line-height:1.45}
+.risk-matrix{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin:8px 0}.risk-cell{aspect-ratio:1;border-radius:5px;display:grid;place-items:center;font-size:11px;color:#fff;font-weight:800}.risk-cell.l{background:#6bad7d}.risk-cell.m{background:#d9a83e}.risk-cell.h{background:#e4773a}.risk-cell.v{background:#c8454b}.risk-cell.c{background:#7b2f4d}
+.weight-row{display:grid;grid-template-columns:1fr 54px;gap:8px;align-items:center;margin:8px 0}.weight-row input{width:100%;accent-color:var(--gis)}.weight-row b{font-size:11px;text-align:right}
+.hazard-chip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--border);border-radius:999px;padding:4px 7px;font-size:11px;margin:2px 3px 2px 0;background:#fff}.hazard-chip i{width:7px;height:7px;border-radius:50%;display:inline-block}
+.p07-source a{color:var(--forest);text-decoration:none}.p07-source a:hover{text-decoration:underline}
+

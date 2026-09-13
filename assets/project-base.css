@@ -1,0 +1,330 @@
+
+:root{
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f8fafc;--text:#1f2937;--muted:#667085;--border:#e4e7ec;
+  --primary:#2563eb;--gis:#147d64;--success:#2e9d68;--warning:#e6a23c;--danger:#d9534f;
+  --radius:12px;--shadow:0 1px 2px rgba(16,24,40,.04),0 4px 12px rgba(16,24,40,.05);
+  --rail:64px;--panel:312px;--detail:372px;--top:64px;
+}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:var(--bg);font-size:14px}
+button,input,select,textarea{font:inherit}.app{min-height:100vh;display:grid;grid-template-rows:var(--top) 1fr;background:var(--bg)}
+.topbar{height:var(--top);display:flex;align-items:center;gap:16px;padding:0 18px;border-bottom:1px solid var(--border);background:rgba(255,255,255,.98);position:sticky;top:0;z-index:1000}
+.brand{min-width:270px}.brand .pid{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--gis);text-transform:uppercase}.brand h1{font-size:16px;margin:2px 0 0;line-height:1.15}.brand p{font-size:11px;color:var(--muted);margin:2px 0 0}
+.search{min-width:250px;max-width:360px;flex:1;position:relative}.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:17px;height:17px;stroke:var(--muted);fill:none;stroke-width:1.8}.search input{width:100%;height:40px;border:1px solid var(--border);border-radius:10px;padding:0 12px 0 38px;background:#fff;color:var(--text);outline:none}.search input:focus{border-color:#9db2ff;box-shadow:0 0 0 3px rgba(37,99,235,.10)}
+.top-controls{display:flex;align-items:center;gap:8px;margin-left:auto}.top-controls label{font-size:11px;color:var(--muted)}.top-controls select{height:38px;border:1px solid var(--border);background:#fff;border-radius:9px;padding:0 30px 0 10px;color:var(--text);font-size:12px}
+.icon-btn{width:38px;height:38px;border:1px solid var(--border);background:#fff;border-radius:9px;display:grid;place-items:center;cursor:pointer;color:#475467}.icon-btn:hover{background:var(--surface-2);border-color:#d0d5dd}.icon-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.shell{min-height:0;display:grid;grid-template-columns:var(--rail) var(--panel) minmax(0,1fr);position:relative}
+.rail{background:#fff;border-right:1px solid var(--border);padding:10px 8px;display:flex;flex-direction:column;gap:6px;z-index:500}.nav-btn{height:48px;border:0;background:transparent;border-radius:10px;color:#667085;display:grid;place-items:center;cursor:pointer;position:relative}.nav-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.nav-btn:hover{background:#f7f9fb;color:#344054}.nav-btn.active{background:#ecf7f2;color:var(--gis)}.nav-btn.active:before{content:"";position:absolute;left:-8px;top:10px;bottom:10px;width:3px;border-radius:0 4px 4px 0;background:var(--gis)}
+.context-panel{background:#fff;border-right:1px solid var(--border);min-width:0;overflow:auto}.panel-head{padding:18px 18px 12px;border-bottom:1px solid var(--border)}.panel-head h2{font-size:18px;margin:0}.panel-head p{font-size:12px;color:var(--muted);margin:5px 0 0;line-height:1.45}.panel-body{padding:14px 16px 24px}
+.section-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#667085;margin:16px 0 8px}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.metric-card{border:1px solid var(--border);border-radius:10px;padding:10px 11px;background:#fff}.metric-card b{display:block;font-size:18px;line-height:1.1}.metric-card span{font-size:11px;color:var(--muted)}
+.reco{border:1px solid #cfe7db;background:#f2faf6;border-radius:12px;padding:12px}.reco .eyebrow{font-size:11px;font-weight:800;color:var(--gis);text-transform:uppercase}.reco h3{font-size:14px;margin:3px 0 6px}.reco p{font-size:11px;color:#53635b;margin:0;line-height:1.45}.mini-progress{height:5px;background:#e8eef0;border-radius:99px;overflow:hidden;margin:8px 0}.mini-progress i{display:block;height:100%;background:var(--gis);border-radius:99px}
+.layer-group{border-bottom:1px solid var(--border);padding:8px 0}.layer-row{display:flex;align-items:center;gap:8px;padding:7px 2px}.layer-row input{accent-color:var(--gis)}.layer-row label{font-size:12px;flex:1}.pill{font-size:11px;padding:3px 7px;border-radius:999px;background:#f2f4f7;color:#667085}
+.entity-list{display:flex;flex-direction:column;gap:4px}.entity-row{display:grid;grid-template-columns:22px 32px minmax(0,1fr) auto;align-items:center;gap:7px;border:1px solid transparent;border-radius:10px;padding:7px 8px;cursor:pointer;min-height:48px}.entity-row:hover{background:#f8fafc;border-color:#edf0f2}.entity-row.selected{background:#ecf7f2;border-color:#cfe7db}.entity-row input{accent-color:var(--gis)}.rank{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:#eef2f6;color:#475467;font-weight:800;font-size:11px}.rank.top{background:#e5f5ed;color:#106c53}.entity-row b{font-size:12px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.entity-row small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.info-btn{width:30px;height:30px;border:1px solid var(--border);border-radius:8px;background:#fff;display:grid;place-items:center;cursor:pointer;color:#667085}.info-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8}
+.selection-bar{display:none;align-items:center;gap:6px;background:#f2f4f7;border:1px solid var(--border);border-radius:10px;padding:8px;margin-bottom:8px;font-size:11px}.selection-bar.show{display:flex}.selection-bar b{margin-right:auto}.text-btn{border:0;background:transparent;color:var(--primary);font-size:11px;font-weight:700;cursor:pointer;padding:4px 5px}
+.process-step{border:1px solid var(--border);border-radius:10px;margin-bottom:7px;overflow:hidden}.process-step button{width:100%;border:0;background:#fff;padding:10px;display:flex;gap:9px;align-items:flex-start;text-align:left;cursor:pointer}.process-step button:hover{background:#f8fafc}.step-num{width:26px;height:26px;flex:0 0 26px;border-radius:50%;background:#eef2f6;display:grid;place-items:center;font-size:11px;font-weight:800}.process-step.active .step-num{background:var(--gis);color:#fff}.process-step b{font-size:12px;display:block}.process-step small{font-size:11px;color:var(--muted);display:block;margin-top:2px;line-height:1.35}.process-detail{display:none;padding:0 10px 10px 45px;font-size:11px;color:#53635b;line-height:1.5}.process-step.active .process-detail{display:block}
+.control-row{margin-bottom:12px}.control-row label{font-size:11px;color:#667085;display:flex;justify-content:space-between;margin-bottom:5px}.control-row input[type=range]{width:100%;accent-color:var(--gis)}.control-row select,.control-row input[type=text]{width:100%;height:36px;border:1px solid var(--border);border-radius:8px;background:#fff;padding:0 9px;font-size:12px}
+.primary-btn,.secondary-btn{height:38px;border-radius:9px;padding:0 12px;font-weight:700;font-size:12px;cursor:pointer}.primary-btn{background:var(--gis);color:#fff;border:1px solid var(--gis)}.secondary-btn{background:#fff;color:#344054;border:1px solid var(--border)}
+.map-stage{position:relative;min-width:0;min-height:620px;background:#e9eef2;overflow:hidden}.map{position:absolute;inset:0}.map-toolbar{position:absolute;right:14px;bottom:16px;z-index:600;display:flex;gap:6px}.map-tool{width:40px;height:40px;border:1px solid var(--border);background:rgba(255,255,255,.96);border-radius:10px;display:grid;place-items:center;box-shadow:var(--shadow);cursor:pointer;color:#475467}.map-tool svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}.legend{position:absolute;right:14px;bottom:66px;z-index:550;background:rgba(255,255,255,.97);border:1px solid var(--border);border-radius:10px;padding:10px;box-shadow:var(--shadow);font-size:11px;min-width:150px;display:none}.legend.show{display:block}.legend b{display:block;margin-bottom:5px}.legend-row{display:flex;align-items:center;gap:7px;margin:4px 0;color:#475467}.swatch{width:12px;height:8px;border-radius:2px}
+.detail-drawer{position:absolute;right:0;top:0;bottom:0;width:var(--detail);background:#fff;border-left:1px solid var(--border);z-index:700;transform:translateX(100%);transition:transform .18s ease;box-shadow:-12px 0 35px rgba(16,24,40,.08);display:flex;flex-direction:column}.detail-drawer.open{transform:translateX(0)}.detail-head{padding:16px;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:flex-start}.detail-head .title{flex:1;min-width:0}.detail-head .eyebrow{font-size:11px;color:var(--gis);font-weight:800;text-transform:uppercase}.detail-head h3{font-size:18px;margin:3px 0 3px}.detail-head p{font-size:11px;color:var(--muted);margin:0;line-height:1.4}.detail-tabs{display:flex;gap:2px;padding:8px 10px;border-bottom:1px solid var(--border);overflow:auto}.detail-tabs button{border:0;background:transparent;border-radius:7px;padding:7px 9px;font-size:11px;color:#667085;cursor:pointer;white-space:nowrap}.detail-tabs button.active{background:#f2f4f7;color:#1f2937;font-weight:700}.detail-body{padding:14px 16px 24px;overflow:auto}.detail-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}.detail-metric{border:1px solid var(--border);border-radius:9px;padding:9px}.detail-metric b{display:block;font-size:14px}.detail-metric span{font-size:11px;color:var(--muted)}.kv{display:grid;grid-template-columns:1fr auto;gap:10px;padding:8px 0;border-bottom:1px solid #f0f2f4;font-size:11px}.kv span{color:#667085}.bar-row{margin:9px 0}.bar-row header{display:flex;justify-content:space-between;gap:8px;font-size:11px;margin-bottom:4px}.bar-row .track{height:7px;border-radius:99px;background:#eef2f6;overflow:hidden}.bar-row .fill{height:100%;background:var(--gis);border-radius:99px}
+.data-drawer{position:absolute;left:0;right:0;bottom:0;height:286px;background:#fff;border-top:1px solid var(--border);z-index:650;transform:translateY(calc(100% - 38px));transition:transform .18s ease;box-shadow:0 -12px 30px rgba(16,24,40,.05);display:flex;flex-direction:column}.data-drawer.open{transform:translateY(0)}.drawer-handle{height:38px;display:flex;align-items:center;gap:8px;padding:0 12px;border-bottom:1px solid var(--border);cursor:pointer}.drawer-handle b{font-size:12px}.drawer-handle small{color:var(--muted)}.drawer-handle .drawer-actions{margin-left:auto;display:flex;gap:5px}.drawer-body{display:flex;flex-direction:column;min-height:0;flex:1}.drawer-tabs{display:flex;gap:3px;padding:6px 8px;border-bottom:1px solid var(--border);overflow:auto}.drawer-tabs button{border:0;background:transparent;border-radius:7px;padding:6px 8px;font-size:11px;color:#667085;cursor:pointer}.drawer-tabs button.active{background:#eef2f6;color:#1f2937;font-weight:700}.table-wrap{overflow:auto;flex:1}.data-table{width:100%;border-collapse:collapse;font-size:11px;white-space:nowrap}.data-table th{position:sticky;top:0;background:#f8fafc;padding:7px 8px;text-align:left;border-bottom:1px solid var(--border);color:#475467}.data-table td{padding:7px 8px;border-bottom:1px solid #f0f2f4}.data-table tr:hover{background:#f8fafc}
+.leaflet-container{font:inherit}.leaflet-control-zoom{border:1px solid var(--border);box-shadow:var(--shadow)}.leaflet-control-zoom a{background:#fff;color:#344054;border-bottom-color:var(--border)}.leaflet-popup-content-wrapper{border-radius:10px;box-shadow:var(--shadow)}.leaflet-popup-content{font:inherit;font-size:12px}.leaflet-tooltip{font:inherit;font-size:11px;border:1px solid var(--border);border-radius:7px;box-shadow:var(--shadow)}
+
+.nav-btn.project-bottom{margin-top:auto}
+.project-tabs{display:flex;gap:4px;overflow:auto;padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--border)}
+.project-tabs button{border:0;background:transparent;border-radius:7px;padding:7px 8px;font-size:11px;color:#667085;cursor:pointer;white-space:nowrap}
+.project-tabs button.active{background:#ecf7f2;color:var(--gis);font-weight:800}
+.project-meta{display:grid;grid-template-columns:1fr;gap:0}
+.project-meta .meta-row{padding:8px 0;border-bottom:1px solid #f0f2f4}
+.project-meta b{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#667085;display:block;margin-bottom:3px}
+.project-meta span{font-size:11px;line-height:1.5;color:#344054}
+.platform-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.platform-chip{font-size:11px;border:1px solid #dce4df;background:#f8fafc;border-radius:999px;padding:4px 7px;color:#475467}
+.data-card{border-bottom:1px solid var(--border);padding:9px 0}
+.data-card:last-child{border-bottom:0}
+.data-card header{display:flex;gap:7px;align-items:center}
+.data-type{font-size:11px;background:#eef2f6;color:#475467;border-radius:999px;padding:3px 6px}
+.data-card b{font-size:11px}.data-card p{font-size:11px;color:#667085;margin:4px 0;line-height:1.45}
+.field-line{font-size:11px;color:#475467;line-height:1.45}
+.desktop-step{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:9px 0;border-bottom:1px solid #f0f2f4}
+.desktop-step:last-child{border-bottom:0}
+.desktop-step .no{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#ecf7f2;color:var(--gis);font-size:11px;font-weight:800}
+.desktop-step h4{font-size:11px;margin:0 0 3px}
+.desktop-step .tool{font-size:11px;color:#315f46;font-weight:700;margin-bottom:3px}
+.desktop-step p{font-size:11px;line-height:1.5;color:#5b6962;margin:0}
+.desktop-step .output{font-size:11px;color:#667085;margin-top:4px}
+.analysis-card{border-left:3px solid var(--gis);background:#f7faf8;border-radius:8px;padding:9px 10px;margin-bottom:8px}
+.analysis-card b{font-size:11px;display:block;margin-bottom:3px}
+.analysis-card p{font-size:11px;line-height:1.5;color:#53635b;margin:0}
+.check-list{list-style:none;margin:0;padding:0}
+.check-list li{font-size:11px;line-height:1.5;color:#53635b;padding:6px 0 6px 18px;border-bottom:1px solid #f0f2f4;position:relative}
+.check-list li:before{content:"✓";position:absolute;left:0;color:var(--gis);font-weight:800}
+.output-list{display:flex;flex-wrap:wrap;gap:6px}
+.output-pill{font-size:11px;padding:5px 7px;border-radius:7px;background:#f2f4f7;color:#475467;border:1px solid var(--border)}
+.project-note{background:#fff9ed;border:1px solid #f0ddad;border-radius:9px;padding:8px 9px;font-size:11px;line-height:1.5;color:#745b22;margin-top:9px}
+
+
+
+
+@media print{.rail,.context-panel,.topbar,.map-toolbar,.legend,.detail-drawer,.data-drawer{display:none}.shell{display:block}.map-stage{min-height:720px;height:720px}}
+
+.data-drawer.full{height:calc(100% - 38px)}.toast{position:absolute;right:16px;top:16px;z-index:1100;background:#101828;color:white;border-radius:9px;padding:9px 11px;font-size:11px;opacity:0;transform:translateY(-5px);pointer-events:none;transition:.15s ease}.toast.show{opacity:1;transform:none}
+
+
+/* =========================================================
+   MASTER SHELL SCROLL FIX — V3
+   Window/map stay fixed; contextual panels own their scroll.
+   ========================================================= */
+html,body{
+  width:100%;
+  height:100%;
+  min-height:0;
+  overflow:hidden;
+}
+body{
+  overscroll-behavior:none;
+}
+.app{
+  width:100%;
+  height:100vh;
+  height:100dvh;
+  min-height:0;
+  overflow:hidden;
+  display:grid;
+  grid-template-rows:var(--top) minmax(0,1fr);
+}
+.topbar{
+  position:relative;
+  top:auto;
+  flex:0 0 auto;
+  min-height:0;
+}
+.shell{
+  min-height:0;
+  height:100%;
+  max-height:100%;
+  overflow:hidden;
+  align-items:stretch;
+}
+
+/* VERY LEFT ICON RAIL: fixed inside the application shell, never scrolls */
+.rail{
+  height:100%;
+  min-height:0;
+  overflow:hidden;
+  position:relative;
+  overscroll-behavior:none;
+}
+
+/* LEFT CONTEXT / PROJECT DETAILS PANEL: independent scroll */
+.context-panel{
+  height:100%;
+  min-height:0;
+  max-height:100%;
+  overflow-y:auto;
+  overflow-x:hidden;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* Keep panel heading visible while long content scrolls */
+.panel-head{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,.98);
+  backdrop-filter:blur(8px);
+}
+.panel-body{
+  min-height:0;
+}
+
+/* Project Details can be very long: tabs stay visible, content scrolls below */
+.project-tabs{
+  position:sticky;
+  top:0;
+  z-index:12;
+  background:#fff;
+  padding-top:2px;
+}
+
+/* MAP: locked to available viewport; never causes document scroll */
+.map-stage{
+  height:100%;
+  min-height:0;
+  max-height:100%;
+  overflow:hidden;
+}
+.map{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  min-height:0;
+}
+
+/* RIGHT DETAIL DRAWER: own internal scroll only */
+.detail-drawer{
+  height:100%;
+  min-height:0;
+  max-height:100%;
+  overflow:hidden;
+}
+.detail-body{
+  min-height:0;
+  overflow-y:auto;
+  overflow-x:hidden;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* BOTTOM DATA DRAWER: drawer stays inside map; only table area scrolls */
+.data-drawer{
+  max-height:100%;
+  overflow:hidden;
+}
+.drawer-body{
+  min-height:0;
+  overflow:hidden;
+}
+.table-wrap{
+  min-height:0;
+  overflow:auto;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* Full data mode fills map workspace only, never browser page */
+.data-drawer.full{
+  height:100%;
+  max-height:100%;
+}
+
+/* Small, professional scrollbars on panels/tables */
+.context-panel,
+.detail-body,
+.table-wrap{
+  scrollbar-width:thin;
+  scrollbar-color:#c8d0d5 transparent;
+}
+.context-panel::-webkit-scrollbar,
+.detail-body::-webkit-scrollbar,
+.table-wrap::-webkit-scrollbar{
+  width:8px;
+  height:8px;
+}
+.context-panel::-webkit-scrollbar-thumb,
+.detail-body::-webkit-scrollbar-thumb,
+.table-wrap::-webkit-scrollbar-thumb{
+  background:#c8d0d5;
+  border-radius:999px;
+  border:2px solid transparent;
+  background-clip:padding-box;
+}
+.context-panel::-webkit-scrollbar-track,
+.detail-body::-webkit-scrollbar-track,
+.table-wrap::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+/* Mobile keeps the same ownership of scrolling */
+
+
+
+
+/* =========================================================
+   PROJECT DETAILS STICKY TABS FIX — V4
+   Heading stays fixed; panel body owns scrolling;
+   Project Details tab row stays visible while content scrolls.
+   ========================================================= */
+
+/* Left contextual panel becomes a fixed shell rather than the scroll owner */
+.context-panel{
+  height:100%;
+  min-height:0;
+  max-height:100%;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Panel title/header always stays visible */
+.panel-head{
+  position:relative;
+  top:auto;
+  flex:0 0 auto;
+  z-index:30;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+
+/* Only the panel content scrolls */
+.panel-body{
+  flex:1 1 auto;
+  min-height:0;
+  overflow-y:auto;
+  overflow-x:hidden;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+  -webkit-overflow-scrolling:touch;
+  padding-top:14px;
+}
+
+/* Project Details menu tabs remain pinned to top of scrolling content */
+.project-tabs{
+  position:sticky;
+  top:-14px; /* compensates panel-body top padding */
+  z-index:25;
+  background:rgba(255,255,255,.98);
+  backdrop-filter:blur(8px);
+  margin:0 -2px 10px;
+  padding:14px 2px 8px;
+  border-bottom:1px solid var(--border);
+  box-shadow:0 6px 10px rgba(16,24,40,.035);
+}
+
+/* Horizontal tab row remains usable on narrower left panels */
+.project-tabs{
+  overflow-x:auto;
+  overflow-y:hidden;
+  scrollbar-width:none;
+  white-space:nowrap;
+}
+.project-tabs::-webkit-scrollbar{
+  display:none;
+}
+.project-tabs button{
+  flex:0 0 auto;
+}
+
+/* Scrollbars now belong to panel-body, not the context-panel shell */
+.panel-body{
+  scrollbar-width:thin;
+  scrollbar-color:#c8d0d5 transparent;
+}
+.panel-body::-webkit-scrollbar{
+  width:8px;
+}
+.panel-body::-webkit-scrollbar-thumb{
+  background:#c8d0d5;
+  border-radius:999px;
+  border:2px solid transparent;
+  background-clip:padding-box;
+}
+.panel-body::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+/* Remove redundant scrollbar styling from context-panel itself */
+.context-panel{
+  scrollbar-width:none;
+}
+.context-panel::-webkit-scrollbar{
+  display:none;
+}
+
+/* Mobile: same fixed-header + sticky-tabs behavior */
+
+
+

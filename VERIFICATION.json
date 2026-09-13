@@ -1,0 +1,132 @@
+{
+  "environment": "jsdom 26.1.0; DOM/runtime simulation, not visual browser rendering",
+  "total": 534,
+  "projects": [
+    {
+      "file": "index.html",
+      "checks": 13,
+      "passed": 13,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P01.html",
+      "checks": 33,
+      "passed": 33,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P02.html",
+      "checks": 33,
+      "passed": 33,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P03.html",
+      "checks": 33,
+      "passed": 33,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P04.html",
+      "checks": 33,
+      "passed": 33,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P05.html",
+      "checks": 33,
+      "passed": 33,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P06.html",
+      "checks": 33,
+      "passed": 33,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P07.html",
+      "checks": 35,
+      "passed": 35,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P08.html",
+      "checks": 29,
+      "passed": 29,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P09.html",
+      "checks": 32,
+      "passed": 32,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P10.html",
+      "checks": 30,
+      "passed": 30,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P11.html",
+      "checks": 30,
+      "passed": 30,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P12.html",
+      "checks": 33,
+      "passed": 33,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P13.html",
+      "checks": 33,
+      "passed": 33,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P14.html",
+      "checks": 35,
+      "passed": 35,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P15.html",
+      "checks": 32,
+      "passed": 32,
+      "failed": [],
+      "errors": []
+    },
+    {
+      "file": "projects/P16.html",
+      "checks": 34,
+      "passed": 34,
+      "failed": [],
+      "errors": []
+    }
+  ],
+  "packaging": {
+    "javascript_files_parsed": 23,
+    "local_references_checked": 184,
+    "missing_references": [],
+    "project_pages": 16,
+    "legacy_tile_endpoints": 0
+  }
+}

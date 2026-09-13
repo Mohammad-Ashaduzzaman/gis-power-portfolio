@@ -1,0 +1,6 @@
+/* P13 project-specific content; approved P06 shell remains unchanged */
+.p13-scenarios{display:flex;gap:4px;margin:8px 0}.p13-scenarios button{flex:1;height:31px;border:1px solid var(--border);border-radius:7px;background:#fff;font-size:11px}.p13-scenarios button.active{background:#edf6fb;border-color:#a9cee3;color:#24678b;font-weight:800}
+.p13-chain{border:1px solid var(--border);border-radius:10px;padding:8px;background:#f9fcfb;margin:8px 0}.p13-chain .row{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.p13-chain .box{flex:1;min-width:66px;text-align:center;padding:6px;border:1px solid #dde4e0;border-radius:7px;background:#fff}.p13-chain .box b{display:block;font-size:11px}.p13-chain .box span{font-size:11px;color:#667085}.p13-chain .arr{color:#98a2b3}
+.p13-delta{border:1px solid #cbd9f3;background:#f6f8ff;border-radius:10px;padding:9px;margin:8px 0}.p13-delta b{font-size:11px}.p13-delta p{font-size:11px;line-height:1.45;color:#526071;margin:4px 0}
+.p13-safe{border:1px solid #c7e2d5;background:#f4fbf7;border-radius:10px;padding:9px;margin:8px 0}.p13-safe b{font-size:11px;color:#1c7350}.p13-safe p{font-size:11px;line-height:1.45;color:#4d685b;margin:4px 0}
+

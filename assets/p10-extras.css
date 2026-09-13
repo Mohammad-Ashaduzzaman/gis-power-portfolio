@@ -1,0 +1,10 @@
+/* P10 project-specific content; approved P06 application shell remains unchanged */
+.p10-one-line{border:1px solid var(--border);border-radius:10px;background:linear-gradient(180deg,#fbfdfc,#f5faf7);padding:7px;margin-bottom:10px;overflow:hidden}
+.p10-one-line svg{width:100%;height:150px}.p10-one-line text{font:9px Inter,system-ui,sans-serif;fill:#475467}.p10-one-line .bus{stroke:#364152;stroke-width:4}.p10-one-line .feed{fill:none;stroke-width:3}.p10-one-line .tie{stroke:#e6a23c;stroke-width:2;stroke-dasharray:5 4}.p10-one-line .dev{fill:#fff;stroke:#364152;stroke-width:1.4}
+.trace-summary{border:1px solid #cbd8f4;background:#f6f8ff;border-radius:10px;padding:9px;margin:8px 0}.trace-summary b{font-size:11px}.trace-summary p{font-size:11px;color:#536070;line-height:1.45;margin:4px 0}
+.trace-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px}.trace-tags span{font-size:11px;background:#e8eefc;color:#315cc1;border-radius:999px;padding:3px 5px}
+.outage-card{border:1px solid #efc2c5;background:#fff6f7;border-radius:10px;padding:9px;margin:8px 0}.outage-card h4{font-size:11px;color:#9b3039;margin:0 0 4px}.outage-card p{font-size:11px;line-height:1.45;color:#725052;margin:0}
+.restore-card{border:1px solid #bfe1d1;background:#f3fbf7;border-radius:10px;padding:9px;margin:8px 0}.restore-card h4{font-size:11px;color:#1e7652;margin:0 0 4px}.restore-card p{font-size:11px;line-height:1.45;color:#49675a;margin:0}
+.switch-seq{counter-reset:sw}.switch-step{display:grid;grid-template-columns:24px 1fr;gap:7px;padding:6px 0;border-bottom:1px solid #eef1f2;font-size:11px}.switch-step:before{counter-increment:sw;content:counter(sw);width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:#ecf7f2;color:#147d64;font-weight:800;font-size:11px}
+.p10-warning{font-size:11px;line-height:1.45;color:#815725;background:#fff8e8;border:1px solid #efd7a1;border-radius:8px;padding:8px;margin:8px 0}
+
